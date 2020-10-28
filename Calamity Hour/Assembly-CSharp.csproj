@@ -703,7 +703,12 @@
       <HintPath>C:/Users/neilb/OneDrive/Desktop/Calamity/Calamity Hour/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{58407127-3B23-C8B6-83A1-5679C5103380}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
