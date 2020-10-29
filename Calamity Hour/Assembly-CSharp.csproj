@@ -69,6 +69,7 @@
     <Compile Include="Assets\First person controller\FirstPersonLook.cs" />
     <Compile Include="Assets\First person controller\FirstPersonMovement.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\ShootAtClickPosition.cs" />
     <Compile Include="Assets\Sharp Text Mesh\Script\SharpText.cs" />
     <Compile Include="Assets\Sharp Text Mesh\Script\SharpText_Demo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
