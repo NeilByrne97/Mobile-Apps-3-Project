@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 23679033}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Waypoint 000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,7 +251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 70681526}
   m_Layer: 0
-  m_Name: GameObject (7)
+  m_Name: Waypoint 007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,7 +281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 130000005}
   m_Layer: 0
-  m_Name: GameObject (8)
+  m_Name: Waypoint 008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,7 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 149092882}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: Waypoint 003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,7 +437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 310253509}
   m_Layer: 0
-  m_Name: GameObject (5)
+  m_Name: Waypoint 005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1080,7 +1080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 766084810}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: Waypoint 002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1111,6 +1111,7 @@ GameObject:
   - component: {fileID: 770922738}
   - component: {fileID: 770922737}
   - component: {fileID: 770922736}
+  - component: {fileID: 770922739}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1183,6 +1184,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &770922739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770922735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5cb22d331ef7d64796f917c6a455a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circuit: {fileID: 1044538234}
+  lookAheadForTargetOffset: 1
+  lookAheadForTargetFactor: 0.1
+  lookAheadForSpeedOffset: 10
+  lookAheadForSpeedFactor: 0.2
+  progressStyle: 0
+  pointToPointThreshold: 4
+  target: {fileID: 770922738}
 --- !u!1001 &772406014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1457,7 +1478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 978415552}
   m_Layer: 0
-  m_Name: GameObject (10)
+  m_Name: Waypoint 010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1609,7 +1630,7 @@ MonoBehaviour:
     - {fileID: 978415552}
     - {fileID: 2088921606}
     - {fileID: 1772863065}
-  smoothRoute: 1
+  smoothRoute: 0
   editorVisualisationSubsteps: 100
 --- !u!4 &1045725020 stripped
 Transform:
@@ -2409,7 +2430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486399566}
   m_Layer: 0
-  m_Name: GameObject (6)
+  m_Name: Waypoint 006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2439,7 +2460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1487658646}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Waypoint 001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2475,7 +2496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1513639241}
   m_Layer: 0
-  m_Name: GameObject (9)
+  m_Name: Waypoint 009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2850,7 +2871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622659738}
   m_Layer: 0
-  m_Name: GameObject (4)
+  m_Name: Waypoint 004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2904,7 +2925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1772863065}
   m_Layer: 0
-  m_Name: GameObject (12)
+  m_Name: Waypoint 012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3186,7 +3207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2088921606}
   m_Layer: 0
-  m_Name: GameObject (11)
+  m_Name: Waypoint 011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
