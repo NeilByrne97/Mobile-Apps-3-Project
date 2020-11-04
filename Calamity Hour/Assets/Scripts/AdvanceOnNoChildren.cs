@@ -4,25 +4,19 @@ using UnityEngine;
 
 public class AdvanceOnNoChildren : MonoBehaviour
 {
-    private Animator targetAnimator;
-
-    private void Start()
-    {
-   
-    }
-
+    public NodeMovement playerNodeMovement;
 
     void Update()
     {
-
         if (transform.childCount <= 0)
         {
-            if (targetAnimator == null)
+            if (playerNodeMovement == null)
             {
-                targetAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+                playerNodeMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<NodeMovement>();
 
             }
-            targetAnimator.SetTrigger("Advance");
+            playerNodeMovement.MoveToNextNode();
+            Destroy(gameObject);
         }
     }
 }
