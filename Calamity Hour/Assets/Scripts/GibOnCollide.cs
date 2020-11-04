@@ -6,16 +6,12 @@ public class GibOnCollide : MonoBehaviour
 {
     public GameObject gib;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter(Collision col)
     {
+        print("Collision Entered");
+        Destroy(gameObject);
+        Instantiate(gib, transform.position, Quaternion.identity);
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Destroy(gameObject);
-        Instantiate(gib, transform.position, Quaternion.identity);
-    }
 }

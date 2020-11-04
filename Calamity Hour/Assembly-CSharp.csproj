@@ -91,6 +91,7 @@
     <Compile Include="Assets\Imports\Standard Assets\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\Imports\Standard Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\Imports\Standard Assets\Utility\WaypointProgressTracker.cs" />
+    <Compile Include="Assets\Scripts\AdvanceOnNoChildren.cs" />
     <Compile Include="Assets\Scripts\GibOnCollide.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\ShootAtClickPosition.cs" />
