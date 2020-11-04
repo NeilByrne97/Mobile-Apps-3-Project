@@ -1,18 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class NodeMovement : MonoBehaviour
 {
-    public Node currentNode;
+    public Node nextNode;
     public float movementSpeed = 1.0f;
     public float rotationSpeed = 45.0f;
 
-    private Node nextNode;
+    void Start()
+    {
+        nextNode = nextNode.nextNode;
+    }
+
 
     public void MoveToNextNode()
     {
-        nextNode = currentNode.nextNode;
         StartCoroutine(RotateToGoal(true));
     }
 
@@ -33,7 +37,27 @@ public class NodeMovement : MonoBehaviour
                 break;
             }
         }
+        if (initialRotation)
+        {
+            StartCoroutine(MoveToGoal());
+        }
     }
 
+    IEnumerator MoveToGoal()
+    {
+        while (true)
+        {
+            transform.position += transform.forward*movementSpeed*Time.deltaTime;
+      
+            if (Vector3.Dot(transform.forward, nextNode.transform.position - transform.position) <= 0)
+            {
+                transform.position = nextNode.transform.position;
+                break;
+            }
+            yield return null;
+        }
+        nextNode = nextNode.nextNode;
+        StartCoroutine(RotateToGoal(false));
+    }
 
 }
