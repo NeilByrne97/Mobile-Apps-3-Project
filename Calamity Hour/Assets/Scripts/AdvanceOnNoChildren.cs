@@ -13,7 +13,6 @@ public class AdvanceOnNoChildren : MonoBehaviour
             if (playerNodeMovement == null)
             {
                 playerNodeMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<NodeMovement>();
-
             }
             playerNodeMovement.MoveToNextNode();
             Destroy(gameObject);
