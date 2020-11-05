@@ -23,9 +23,8 @@ public class NodeMovement : MonoBehaviour
             goalRotation = Quaternion.LookRotation(currentNode.transform.position - transform.position);
         }
         else
-        {
+        {   // Player rotation is equal to node rotation
             goalRotation = currentNode.transform.rotation;
-            print("Rotating on node");
         }
 
         while (true)
@@ -52,8 +51,8 @@ public class NodeMovement : MonoBehaviour
         while (true)
         {
             transform.position += transform.forward*movementSpeed*Time.deltaTime;
-      
-            if (Vector3.Dot(transform.forward, currentNode.transform.position - transform.position) <= 0)
+            // To ensure you have arrived at the currentNode
+            if (Vector3.Dot(transform.forward, currentNode.transform.position - transform.position) <= 0) 
             {
                 transform.position = currentNode.transform.position;
                 break;
