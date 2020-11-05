@@ -5,6 +5,7 @@ using UnityEngine;
 public class AdvanceOnNoChildren : MonoBehaviour
 {
     public NodeMovement playerNodeMovement;
+    public Animator enemyAdvance;
 
     void Update()
     {
@@ -16,6 +17,7 @@ public class AdvanceOnNoChildren : MonoBehaviour
             }
             playerNodeMovement.MoveToNextNode();
             Destroy(gameObject);
+            enemyAdvance.SetTrigger("Advance");
         }
     }
 }
