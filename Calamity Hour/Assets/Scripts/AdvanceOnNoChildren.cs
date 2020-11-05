@@ -19,6 +19,10 @@ public class AdvanceOnNoChildren : MonoBehaviour
                 enemyNodeMovement = GameObject.FindGameObjectWithTag("Enemy").GetComponent<NodeMovement>();
 
             }
+            else
+            {
+                
+            }
             playerNodeMovement.MoveToNextNode();
             enemyNodeMovement.MoveToNextNode();
 

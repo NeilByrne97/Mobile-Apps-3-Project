@@ -6,13 +6,21 @@ using UnityEngine;
 public class NodeMovement : MonoBehaviour
 {
     public Node currentNode;
+    public Node previousNode;
     public float movementSpeed = 1.0f;
     public float rotationSpeed = 45.0f;
 
     public void MoveToNextNode()
     {
+        if (currentNode == null)
+        {
+            currentNode = previousNode;
+            throw new System.NullReferenceException("Don't worry about it");
+
+        }
         currentNode = currentNode.nextNode;
         StartCoroutine(RotateToGoal(true));
+        print("Current Node is " + currentNode);
     }
 
     IEnumerator RotateToGoal(bool initialRotation)
