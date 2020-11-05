@@ -30,7 +30,7 @@ public class NodeMovement : MonoBehaviour
         while (true)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, goalRotation, rotationSpeed * Time.deltaTime);
-
+            
             if (transform.rotation != goalRotation)
             {
                 yield return null;
