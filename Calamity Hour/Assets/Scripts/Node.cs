@@ -12,6 +12,7 @@ public class Node : MonoBehaviour
         {
             Gizmos.color = Color.green;
             Gizmos.DrawLine(transform.position, nextNode.transform.position);
+           
         }
 
     }

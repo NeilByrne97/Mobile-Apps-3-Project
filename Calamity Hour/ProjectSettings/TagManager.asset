@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - EnemyNode
+  - PlayerNode
+  - Enemy2
+  - Enemys
   layers:
   - Default
   - TransparentFX
