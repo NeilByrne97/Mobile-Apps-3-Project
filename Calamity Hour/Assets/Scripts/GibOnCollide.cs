@@ -8,7 +8,7 @@ public class GibOnCollide : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        print("Collision Entered with " + col);
+        //print("Collision Entered with " + col);
         Destroy(gameObject);
         Instantiate(gib, transform.position, Quaternion.identity);
     }

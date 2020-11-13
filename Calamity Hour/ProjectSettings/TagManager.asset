@@ -9,6 +9,7 @@ TagManager:
   - PlayerNode
   - Enemy2
   - Enemys
+  - Enemy3
   layers:
   - Default
   - TransparentFX

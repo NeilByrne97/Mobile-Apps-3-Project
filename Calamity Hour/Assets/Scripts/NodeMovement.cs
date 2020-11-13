@@ -16,7 +16,6 @@ public class NodeMovement : MonoBehaviour
         {
             currentNode = previousNode;
             throw new System.NullReferenceException("Don't worry about it");
-
         }
         currentNode = currentNode.nextNode;
         StartCoroutine(RotateToGoal(true));
