@@ -6,6 +6,7 @@ public class ThrowAfterDelay : MonoBehaviour
 {
     public float delay = 1.0f;
     public GameObject throwingObject;
+    public Transform throwPoint;
 
     private GameObject player;
     private Animator animator;
@@ -24,7 +25,7 @@ public class ThrowAfterDelay : MonoBehaviour
 
     void Throw()
     {
-        Instantiate(throwingObject, transform.position, Quaternion.LookRotation(player.transform.position - transform.position));
+        Instantiate(throwingObject, throwPoint.position, Quaternion.LookRotation(Camera.main.transform.position - throwPoint.position));
         animator.SetBool("Throw", true);
 
         Invoke("Throw", delay);
