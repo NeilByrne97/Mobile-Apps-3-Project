@@ -13,7 +13,7 @@ public class ShootAfterDelay : MonoBehaviour
         Invoke("Shoot", delay);
     }
 
-    void Update()
+    void LateUpdate()
     {
         animator.SetBool("Shoot", false);
 
