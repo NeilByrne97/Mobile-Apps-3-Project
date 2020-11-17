@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\NodeMovement.cs" />
+    <Compile Include="Assets\Scripts\ShootAfterDelay.cs" />
     <Compile Include="Assets\Scripts\ShootAtClickPosition.cs" />
     <Compile Include="Assets\Textures\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Textures\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
