@@ -9,7 +9,7 @@ public class AdvanceOnNoChildren : MonoBehaviour
     public NodeMovement enemyNodeMovement;
     public Animator targetAnimator;
 
-    int count = 2;
+    [SerializeField] int count = 2;
 
     void Update()
     {
@@ -27,33 +27,10 @@ public class AdvanceOnNoChildren : MonoBehaviour
             }
             if (targetAnimator == null)
             {
-                print("Target animator is null");
-                if (count == 2)
-                {
-                    print("Count is 2");
-                    targetAnimator = GameObject.FindGameObjectWithTag("Enemy2").GetComponent<Animator>();
-
-                   
-                }
-
-                else if (count == 3)
-                {
-                    targetAnimator = GameObject.FindGameObjectWithTag("Enemy3").GetComponent<Animator>();
-                    print("Count is 3");
-                    print("Yooooo");
-                }
-                print("Outside loop Count is " + count);
+                targetAnimator = GameObject.FindGameObjectWithTag("Enemy2").GetComponent<Animator>();
             }
+           
 
-            if (count == 3)
-            {
-                targetAnimator = GameObject.FindGameObjectWithTag("Enemy3").GetComponent<Animator>();
-                print("Count is 3");
-                print("Target != null");
-            }
-
-            count++;
-            print("Count inc is " + count);
 
             NodeMovement.MoveToNextNode();
             //enemyNodeMovement.MoveToNextNode();
