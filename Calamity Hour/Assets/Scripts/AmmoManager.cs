@@ -8,6 +8,7 @@ public class AmmoManager : MonoBehaviour
 
     public int startingAmmo = 6;
     public GameObject[] ammoIcons;
+    public GameObject reloadSplash;
 
     private int currentAmmo;
     private bool reload = false;
@@ -42,6 +43,7 @@ public class AmmoManager : MonoBehaviour
         if (reload)
         {
             GUILayout.Label("Reload!");
+            reloadSplash.SetActive(true);
         }
     }
 }
