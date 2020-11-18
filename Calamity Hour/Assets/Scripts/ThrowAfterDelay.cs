@@ -18,9 +18,9 @@ public class ThrowAfterDelay : MonoBehaviour
         Invoke("Throw", delay);
     }
 
-    void LateUpdate()
+    void Update()
     {
-        animator.SetBool("Shoot", false);
+        animator.SetBool("Throw", false);
     }
 
     void Throw()

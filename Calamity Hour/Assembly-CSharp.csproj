@@ -71,6 +71,7 @@
     <Compile Include="Assets\Imports\Sharp Text Mesh\Script\SharpText.cs" />
     <Compile Include="Assets\Imports\Sharp Text Mesh\Script\SharpText_Demo.cs" />
     <Compile Include="Assets\Scripts\AdvanceOnNoChildren.cs" />
+    <Compile Include="Assets\Scripts\CountdownTimer.cs" />
     <Compile Include="Assets\Scripts\GibOnCollide.cs" />
     <Compile Include="Assets\Scripts\HealthManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
