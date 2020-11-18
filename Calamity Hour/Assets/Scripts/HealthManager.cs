@@ -10,10 +10,10 @@ public class HealthManager : MonoBehaviour
     public GameObject[] healthIcons;
 
     private int currentHealth;
+    private bool gameOver = false;
 
     void Start()
     {
-        print("HealthManager");
         Instance = this;
         currentHealth = startingHealth;
     }
@@ -26,7 +26,25 @@ public class HealthManager : MonoBehaviour
     public static void RemoveHealth()
     {
         Instance.currentHealth--;
-        Instance.healthIcons[Instance.currentHealth].SetActive(false);
 
+        if(Instance.currentHealth >= 0)
+        {
+            Instance.healthIcons[Instance.currentHealth].SetActive(false);
+        }
+
+        // Game Over
+        if(Instance.currentHealth <= 0)
+        {
+            Instance.gameOver = true;
+        }
+
+    }
+
+    private void OnGUI()
+    {
+        if (gameOver)
+        {
+            GUILayout.Label("Game Over");
+        }
     }
 }
