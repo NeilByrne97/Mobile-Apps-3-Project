@@ -13,6 +13,7 @@ public class HealthManager : MonoBehaviour
 
     void Start()
     {
+        print("HealthManager");
         Instance = this;
         currentHealth = startingHealth;
     }

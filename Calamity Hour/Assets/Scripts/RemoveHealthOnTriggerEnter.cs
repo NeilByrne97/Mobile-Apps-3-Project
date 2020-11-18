@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class RemoveHealthOnTriggerEnter : MonoBehaviour
 {
-    void OnTriggerEnter()
+    private void OnCollisionEnter(Collision col)
     {
+        print("Player hit");
         HealthManager.RemoveHealth();
     }
 }
