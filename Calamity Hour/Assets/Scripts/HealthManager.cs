@@ -18,11 +18,6 @@ public class HealthManager : MonoBehaviour
         currentHealth = startingHealth;
     }
 
-    void Update()
-    {
-        
-    }
-
     public static void RemoveHealth()
     {
         Instance.currentHealth--;

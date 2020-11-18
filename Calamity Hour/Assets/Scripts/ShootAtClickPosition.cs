@@ -25,8 +25,8 @@ public class ShootAtClickPosition : MonoBehaviour
             Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane)); // Spawn of bullet
 
             Rigidbody instance = Instantiate(bullet, transform.position, rotation) as Rigidbody; // Instance of bullet
-            instance.AddForce(ray.direction * force, forceMode); // Add force to bullet        }
-
+            instance.AddForce(ray.direction * force, forceMode); // Add force to bullet        
+            AmmoManager.RemoveAmmo(); 
         }
     }
 }
