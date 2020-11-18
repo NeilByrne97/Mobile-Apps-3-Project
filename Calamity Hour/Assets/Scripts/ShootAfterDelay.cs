@@ -16,14 +16,14 @@ public class ShootAfterDelay : MonoBehaviour
     void LateUpdate()
     {
         animator.SetBool("Shoot", false);
-
     }
 
     void Shoot()
     {
         // Deal damage to player
-
+        HealthManager.RemoveHealth();
         animator.SetBool("Shoot", true);
+        Invoke("Shoot", delay);
     }
 
 }
