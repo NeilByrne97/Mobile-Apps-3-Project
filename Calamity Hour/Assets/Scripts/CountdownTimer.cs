@@ -5,10 +5,15 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    float currentTime = 0f;
-    float startingtime = 20f;
+    public CountdownTimer Instance;
 
-    [SerializeField] Text countdownText;
+    float currentTime = 0f;
+    float startingtime = 20f;   // Amount of time player has to complete level
+    private bool gameOver = false;
+
+    public GameObject gameOverSplash;
+
+    [SerializeField] Text countdownText = null;
 
     void Start()
     {
@@ -23,6 +28,22 @@ public class CountdownTimer : MonoBehaviour
         if (currentTime <= 10)
         {
             countdownText.color = Color.red;
+        }
+
+        if(currentTime <=0)
+        {
+            Instance.gameOver = true;
+        }
+    }
+
+
+    private void OnGUI()
+    {
+        if (gameOver)
+        {
+            print("Game over");
+            gameOverSplash.SetActive(true); // GAME OVER splash screen
+            Time.timeScale = 0; // Stop game time
         }
     }
 }

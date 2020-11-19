@@ -10,25 +10,24 @@ public class PauseGame : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel")) // Cancel = Esc button
         {
             if (gamePaused == false)
             {
-                Time.timeScale = 0;
+                Time.timeScale = 0; // Stops in game time
                 gamePaused = true;
-                //Cursor.visible = true;
                 pauseMenu.SetActive(true);
             }
             else
             {
                 pauseMenu.SetActive(false);
                 gamePaused = false;
-                Time.timeScale = 1;
+                Time.timeScale = 1; // Starts in game time
             }
         }
     }
 
-    public void UnpauseGame()
+    public void UnpauseGame()   // To be called from Menu Resume button
     {
         pauseMenu.SetActive(false);
         gamePaused = false;

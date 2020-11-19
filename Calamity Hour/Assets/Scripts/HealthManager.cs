@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+    // Functionally identical to HealthManager script
 public class HealthManager : MonoBehaviour
 {
     public static HealthManager Instance;
 
     public int startingHealth = 3;
     public GameObject[] healthIcons;
+    public GameObject gameOverSplash;
 
     private int currentHealth;
     private bool gameOver = false;
@@ -24,7 +26,7 @@ public class HealthManager : MonoBehaviour
 
         if(Instance.currentHealth >= 0)
         {
-            Instance.healthIcons[Instance.currentHealth].SetActive(false);
+            Instance.healthIcons[Instance.currentHealth].SetActive(false); // Remove heart icon
         }
 
         // Game Over
@@ -39,7 +41,9 @@ public class HealthManager : MonoBehaviour
     {
         if (gameOver)
         {
-            GUILayout.Label("Game Over");
+            gameOverSplash.SetActive(true); // GAME OVER splash screen
+            SoundManager.playSound();
+            Time.timeScale = 0; // Stop game time
         }
     }
 }

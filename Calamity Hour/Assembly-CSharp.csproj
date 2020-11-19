@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\RemoveHealthOnTriggerEnter.cs" />
     <Compile Include="Assets\Scripts\ShootAfterDelay.cs" />
     <Compile Include="Assets\Scripts\ShootAtClickPosition.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\ThrowAfterDelay.cs" />
     <Compile Include="Assets\Textures\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Textures\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

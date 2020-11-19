@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+    // Functionally identical to HealthManager script
 public class AmmoManager : MonoBehaviour
-{
+{ 
     public static AmmoManager Instance;
 
     public int startingAmmo = 6;
@@ -21,13 +22,12 @@ public class AmmoManager : MonoBehaviour
 
     public static void RemoveAmmo()
     {
-
         print("Bang");
         Instance.currentAmmo--;
 
         if (Instance.currentAmmo >= 0)
         {
-            Instance.ammoIcons[Instance.currentAmmo].SetActive(false);
+            Instance.ammoIcons[Instance.currentAmmo].SetActive(false); // Remove bullet icon
         }
 
         // Reload
@@ -42,8 +42,8 @@ public class AmmoManager : MonoBehaviour
     {
         if (reload)
         {
-            GUILayout.Label("Reload!");
-            reloadSplash.SetActive(true);
+            ShootAtClickPosition.noAmmo();  // Player unable to shoot
+            reloadSplash.SetActive(true);   // RELOAD splash screen
         }
     }
 }
