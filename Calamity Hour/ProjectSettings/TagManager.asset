@@ -11,6 +11,9 @@ TagManager:
   - Enemys
   - Enemy3
   - EnemyProjectile
+  - InfiniteAmmo
+  - ExtraTime
+  - ExtraLife
   layers:
   - Default
   - TransparentFX

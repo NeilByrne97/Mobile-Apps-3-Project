@@ -1,22 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    public CountdownTimer Instance;
+    public static CountdownTimer Instance;
 
-    float currentTime = 0f;
+    float currentTime;
     float startingtime = 20f;   // Amount of time player has to complete level
     private bool gameOver = false;
+    private bool addTen = false;
 
     public GameObject gameOverSplash;
+    public GameObject addTenSecsSplash;
 
-    [SerializeField] Text countdownText = null;
+    [SerializeField] Text countdownText;
 
     void Start()
     {
+        Instance = this;
         currentTime = startingtime;
     }
 
@@ -36,6 +40,13 @@ public class CountdownTimer : MonoBehaviour
         }
     }
 
+    public static void AddTenSecs()
+    {
+        print("10 secs added");
+        Instance.currentTime += 10;
+        Instance.addTen = true;
+    }
+
 
     private void OnGUI()
     {
@@ -45,5 +56,14 @@ public class CountdownTimer : MonoBehaviour
             gameOverSplash.SetActive(true); // GAME OVER splash screen
             Time.timeScale = 0; // Stop game time
         }
+        if (addTen)
+        {
+            print("AAAAADDD 10");
+            addTenSecsSplash.SetActive(true);
+            //yield return new WaitForSecondsRealtime(2);
+            //addTenSecsSplash.SetActive(false);
+
+        }
+
     }
 }

@@ -15,8 +15,6 @@ public class ShootAtClickPosition : MonoBehaviour
         print("Ammo set to false");
     }
 
-
-
     // Update is called once per frame
     void Update()
     {
