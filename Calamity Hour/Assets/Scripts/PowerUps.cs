@@ -22,8 +22,9 @@ public class PowerUps : MonoBehaviour
         }
         else if (gameObject = GameObject.FindGameObjectWithTag("ExtraLife"))
         {
-            print("ExtraLife");
             Destroy(gameObject);
+            HealthManager.AddHealth();
+            print("ExtraLife");
         }
 
 

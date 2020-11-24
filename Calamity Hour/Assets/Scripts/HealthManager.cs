@@ -34,6 +34,16 @@ public class HealthManager : MonoBehaviour
         {
             Instance.gameOver = true;
         }
+    }
+
+    public static void AddHealth()
+    {
+        Instance.currentHealth++;
+
+        if (Instance.currentHealth >= 0)
+        {
+            Instance.healthIcons[Instance.currentHealth].SetActive(true); // Add hearth icon
+        }
 
     }
 
