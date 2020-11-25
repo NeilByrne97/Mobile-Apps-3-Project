@@ -74,8 +74,11 @@
     <Compile Include="Assets\Scripts\AdvanceOnNoChildren.cs" />
     <Compile Include="Assets\Scripts\AmmoManager.cs" />
     <Compile Include="Assets\Scripts\CountdownTimer.cs" />
+    <Compile Include="Assets\Scripts\DestroyOnCollide.cs" />
+    <Compile Include="Assets\Scripts\DirectionChoice.cs" />
     <Compile Include="Assets\Scripts\GibOnCollide.cs" />
     <Compile Include="Assets\Scripts\HealthManager.cs" />
+    <Compile Include="Assets\Scripts\Level1AdvanceOnNoChildren.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MoveForward.cs" />
     <Compile Include="Assets\Scripts\Node.cs" />

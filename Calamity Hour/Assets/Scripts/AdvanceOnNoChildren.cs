@@ -29,11 +29,15 @@ public class AdvanceOnNoChildren : MonoBehaviour
             {
                 targetAnimator = GameObject.FindGameObjectWithTag("Enemy2").GetComponent<Animator>();
             }
-           
+            if (targetAnimator == null)
+            {
+                targetAnimator = GameObject.FindGameObjectWithTag("Enemy3").GetComponent<Animator>();
+            }
+            
 
 
             NodeMovement.MoveToNextNode();
-            //enemyNodeMovement.MoveToNextNode();
+            enemyNodeMovement.MoveToNextNode();
             targetAnimator.SetTrigger("Advance");
             Destroy(gameObject);
 

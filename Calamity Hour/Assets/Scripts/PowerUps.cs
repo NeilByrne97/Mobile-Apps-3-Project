@@ -11,6 +11,7 @@ public class PowerUps : MonoBehaviour
         if(gameObject = GameObject.FindGameObjectWithTag("InfiniteAmmo"))
         {
             print("InfiniteAmmo");
+            AmmoManager.InfiniteAmmo();
             Destroy(gameObject);
         } 
         else if (gameObject = GameObject.FindGameObjectWithTag("ExtraTime"))

@@ -1,23 +1,36 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ShootAtClickPosition : MonoBehaviour
 {
+    public static ShootAtClickPosition Instance;
+
     public float force = 10.0f;
     public Rigidbody bullet;
     public ForceMode forceMode;
 
     bool hasAmmo = true;
-    
+
+
     public static void noAmmo()
     {
         print("Ammo set to false");
+        
+        Instance.hasAmmo = false;
+    }
+
+    void Start()
+    {
+        Instance.hasAmmo = true;
+        print("Ammo is " + Instance.hasAmmo);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //print("Ammo is set to " + hasAmmo);
         if(hasAmmo == true)
         {
             if (Input.GetMouseButtonDown(0))
