@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class DestroyOnCollide : MonoBehaviour
 {
+    public GameObject directionSplash;
+
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);    
+        directionSplash.SetActive(true);
+        //Destroy(gameObject); 
     }
 }

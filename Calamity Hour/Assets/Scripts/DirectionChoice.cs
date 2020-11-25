@@ -12,6 +12,7 @@ public class DirectionChoice : MonoBehaviour
     {
         print("Left");
         ChoiceMade = 1;
+        //NodeMovement.TurnLeft();
     }
 
     public void RightOption()

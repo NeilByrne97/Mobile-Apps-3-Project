@@ -5,8 +5,13 @@ using UnityEngine;
 
 public class NodeMovement : MonoBehaviour
 {
+   // public static NodeMovement Instance;
+
     public Node currentNode;
-    public Node previousNode;
+
+    public Node leftNode;
+    public Node rightNode;
+
     public float movementSpeed = 1.0f;
     public float rotationSpeed = 45.0f;
 
@@ -14,7 +19,6 @@ public class NodeMovement : MonoBehaviour
     {
         if (currentNode == null)
         {
-            currentNode = previousNode;
             throw new System.NullReferenceException("Don't worry about it");
         }
        
@@ -23,8 +27,21 @@ public class NodeMovement : MonoBehaviour
         print("Current Node is " + currentNode);
     }
 
+    public void TurnLeft()
+    {
+        currentNode = GameObject.FindGameObjectWithTag("Player").GetComponent<Node>();
+        print("Node is " + currentNode);
+
+
+        print("Turn left");
+        currentNode = leftNode;
+        print("Node is " + currentNode);
+        StartCoroutine(RotateToGoal(true));
+    }
+
     IEnumerator RotateToGoal(bool initialRotation)
     {
+        print("Rotate");
         Quaternion goalRotation;
         if (initialRotation)
         {
