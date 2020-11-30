@@ -5,6 +5,8 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     public Node nextNode;
+    public Node leftNode;
+    public Node rightNode;
 
     private void OnDrawGizmos()
     {

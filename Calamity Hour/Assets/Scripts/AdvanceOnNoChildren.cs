@@ -9,7 +9,23 @@ public class AdvanceOnNoChildren : MonoBehaviour
     public NodeMovement enemyNodeMovement;
     public Animator targetAnimator;
 
-    [SerializeField] int count = 2;
+    public void TurnLeft()
+    {
+        if (NodeMovement == null)
+        {
+            NodeMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<NodeMovement>();
+        }
+        NodeMovement.TurnLeft();
+    }
+
+    public void TurnRight()
+    {
+        if (NodeMovement == null)
+        {
+            NodeMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<NodeMovement>();
+        }
+        NodeMovement.TurnRight();
+    }
 
     void Update()
     {

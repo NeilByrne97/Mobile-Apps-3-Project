@@ -10,14 +10,11 @@ public class DirectionChoice : MonoBehaviour
 
     public void LeftOption()
     {
-        print("Left");
         ChoiceMade = 1;
-        //NodeMovement.TurnLeft();
     }
 
     public void RightOption()
     {
-        print("Right");
         ChoiceMade = 2;
     }
 

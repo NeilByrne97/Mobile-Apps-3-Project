@@ -5,12 +5,10 @@ using UnityEngine;
 
 public class NodeMovement : MonoBehaviour
 {
-   // public static NodeMovement Instance;
-
     public Node currentNode;
+    public Node playerNode;
 
-    public Node leftNode;
-    public Node rightNode;
+    NodeMovement player;
 
     public float movementSpeed = 1.0f;
     public float rotationSpeed = 45.0f;
@@ -25,16 +23,19 @@ public class NodeMovement : MonoBehaviour
         currentNode = currentNode.nextNode;
         StartCoroutine(RotateToGoal(true));
         print("Current Node is " + currentNode);
+        
     }
 
     public void TurnLeft()
     {
-        currentNode = GameObject.FindGameObjectWithTag("Player").GetComponent<Node>();
+        currentNode = currentNode.leftNode;
         print("Node is " + currentNode);
+        StartCoroutine(RotateToGoal(true));
+    }
 
-
-        print("Turn left");
-        currentNode = leftNode;
+    public void TurnRight()
+    {
+        currentNode = currentNode.rightNode;
         print("Node is " + currentNode);
         StartCoroutine(RotateToGoal(true));
     }
