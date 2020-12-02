@@ -37,7 +37,7 @@ public class AdvanceOnNoChildren : MonoBehaviour
                 NodeMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<NodeMovement>();
             }
 
-            if(enemyNodeMovement == null)
+           /* if(enemyNodeMovement == null)
             {
                 //enemyNodeMovement = GameObject.FindGameObjectWithTag("Enemy").GetComponent<NodeMovement>();
             }
@@ -51,7 +51,7 @@ public class AdvanceOnNoChildren : MonoBehaviour
             }
             
 
-
+    */
             NodeMovement.MoveToNextNode();
             enemyNodeMovement.MoveToNextNode();
             targetAnimator.SetTrigger("Advance");

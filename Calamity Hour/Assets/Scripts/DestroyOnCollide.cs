@@ -8,7 +8,8 @@ public class DestroyOnCollide : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("baaaaaand");
         directionSplash.SetActive(true);
-        //Destroy(gameObject); 
+        Destroy(gameObject); 
     }
 }

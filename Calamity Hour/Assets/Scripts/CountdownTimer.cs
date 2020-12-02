@@ -9,7 +9,7 @@ public class CountdownTimer : MonoBehaviour
     public static CountdownTimer Instance;
 
     float currentTime;
-    float startingtime = 20f;   // Amount of time player has to complete level
+    float startingtime = 2000f;   // Amount of time player has to complete level
     private bool gameOver = false;
     private bool addTen = false;
 
