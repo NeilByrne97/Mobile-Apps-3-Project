@@ -6,9 +6,6 @@ using UnityEngine;
 public class NodeMovement : MonoBehaviour
 {
     public Node currentNode;
-    public Node playerNode;
-
-    NodeMovement player;
 
     public float movementSpeed = 1.0f;
     public float rotationSpeed = 45.0f;
