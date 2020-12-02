@@ -12,4 +12,5 @@ public class DestroyOnCollide : MonoBehaviour
         directionSplash.SetActive(true);
         Destroy(gameObject); 
     }
+
 }

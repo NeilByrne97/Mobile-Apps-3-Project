@@ -8,14 +8,29 @@ public class DirectionChoice : MonoBehaviour
     public GameObject Right;
     public int ChoiceMade;
 
+    public NodeMovement NodeMovement;
+
+
     public void LeftOption()
     {
         ChoiceMade = 1;
+        print("Left");
+        if (NodeMovement == null)
+        {
+            NodeMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<NodeMovement>();
+        }
+        NodeMovement.TurnLeft();
     }
 
     public void RightOption()
     {
         ChoiceMade = 2;
+        print("Right");
+        if (NodeMovement == null)
+        {
+            NodeMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<NodeMovement>();
+        }
+        NodeMovement.TurnRight();
     }
 
     private void Update()
