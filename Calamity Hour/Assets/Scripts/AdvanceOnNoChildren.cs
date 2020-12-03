@@ -6,8 +6,6 @@ using UnityEngine;
 public class AdvanceOnNoChildren : MonoBehaviour
 {
     public NodeMovement NodeMovement;
-    public NodeMovement enemyNodeMovement;
-    public Animator targetAnimator;
 
     void Update()
     {
@@ -19,26 +17,8 @@ public class AdvanceOnNoChildren : MonoBehaviour
                 NodeMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<NodeMovement>();
             }
 
-            if(enemyNodeMovement == null)
-            {
-                enemyNodeMovement = GameObject.FindGameObjectWithTag("Enemy").GetComponent<NodeMovement>();
-            }
-            /*if (targetAnimator == null)
-            {
-                targetAnimator = GameObject.FindGameObjectWithTag("Enemy2").GetComponent<Animator>();
-            }
-            if (targetAnimator == null)
-            {
-                targetAnimator = GameObject.FindGameObjectWithTag("Enemy3").GetComponent<Animator>();
-            }
-            
-
-    */
             NodeMovement.MoveToNextNode();
-            enemyNodeMovement.MoveToNextNode();
-            //targetAnimator.SetTrigger("Advance");
             Destroy(gameObject);
-
 
         }
     }
