@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\DestroyOnCollide.cs" />
     <Compile Include="Assets\Scripts\DirectionChoice.cs" />
     <Compile Include="Assets\Scripts\EndLevelTrigger.cs" />
+    <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\GibOnCollide.cs" />
     <Compile Include="Assets\Scripts\HealthManager.cs" />
     <Compile Include="Assets\Scripts\Level1AdvanceOnNoChildren.cs" />
