@@ -4,22 +4,14 @@ using UnityEngine;
 
 public class ShootAfterDelay : MonoBehaviour
 {
-    public float delay = 1.0f;
+    public float delay = 15.0f;
     private Animator animator;
 
-    void Start()
+    public void Shoot()
     {
+        print("Yooooo");
         animator = GetComponentInChildren<Animator>();
         Invoke("Shoot", delay);
-    }
-
-    void LateUpdate()
-    {
-        animator.SetBool("Shoot", false);
-    }
-
-    void Shoot()
-    {
         // Deal damage to player
         HealthManager.RemoveHealth();
         animator.SetBool("Shoot", true);
