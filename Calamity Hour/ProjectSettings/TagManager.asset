@@ -7,16 +7,14 @@ TagManager:
   - Enemy
   - EnemyNode
   - PlayerNode
-  - Enemy2
-  - Enemys
   - Enemy3
   - EnemyProjectile
   - InfiniteAmmo
   - ExtraTime
   - ExtraLife
   - Left
-  - Enemy0
-  - Enemy1
+  - Bullet
+  - EndPoint
   layers:
   - Default
   - TransparentFX
@@ -30,7 +28,7 @@ TagManager:
   - Enemy Projectile
   - Player
   - Player Projectile
-  - 
+  - Bullet
   - 
   - 
   - 

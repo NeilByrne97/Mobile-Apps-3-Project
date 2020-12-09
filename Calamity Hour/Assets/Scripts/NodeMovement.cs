@@ -23,6 +23,13 @@ public class NodeMovement : MonoBehaviour
         
     }
 
+    public void CoverNode()
+    {
+        currentNode = currentNode.coverNode;
+        print("Node is " + currentNode);
+        StartCoroutine(RotateToGoal(true));
+    }
+
     public void TurnLeft()
     {
         currentNode = currentNode.leftNode;

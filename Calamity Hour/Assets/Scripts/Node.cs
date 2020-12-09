@@ -7,6 +7,7 @@ public class Node : MonoBehaviour
     public Node nextNode;
     public Node leftNode;
     public Node rightNode;
+    public Node coverNode;
 
     private void OnDrawGizmos()
     {

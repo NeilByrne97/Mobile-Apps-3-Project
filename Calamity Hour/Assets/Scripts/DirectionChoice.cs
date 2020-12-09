@@ -6,11 +6,22 @@ public class DirectionChoice : MonoBehaviour
 {
     public GameObject Left;
     public GameObject Right;
+    public GameObject Cover;
     public int ChoiceMade;
 
     public NodeMovement NodeMovement;
 
-
+    public void CoverReload()
+    {
+        //ChoiceMade = 0;
+        print("Cover");
+        if (NodeMovement == null)
+        {
+            NodeMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<NodeMovement>();
+        }
+        NodeMovement.CoverNode();
+    }
+    
     public void LeftOption()
     {
         ChoiceMade = 1;
