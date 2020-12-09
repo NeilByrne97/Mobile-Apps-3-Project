@@ -181,7 +181,7 @@
     <None Include="Assets\Imports\HighQualityBricks&amp;Walls\Shaders\shading-671263.shader" />
     <None Include="Assets\Imports\HighQualityBricks&amp;Walls\Shaders\wall-617961.shader" />
     <None Include="Assets\Textures\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\Industrial Props\ReadMe.txt" />
+    <None Include="Assets\Prefabs\Industrial Props\ReadMe.txt" />
     <None Include="Assets\Imports\HighQualityBricks&amp;Walls\Shaders\wood-877365.shader" />
     <None Include="Assets\Textures\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Imports\HighQualityBricks&amp;Walls\Shaders\wall-846013.shader" />
@@ -732,34 +732,34 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/neilb/OneDrive/Desktop/Calamity/Calamity Hour/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/neilb/OneDrive/Desktop/Calamity/Calamity Hour/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/neilb/OneDrive/Desktop/Calamity/Calamity Hour/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/neilb/OneDrive/Desktop/Calamity/Calamity Hour/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/neilb/OneDrive/Desktop/Calamity/Calamity Hour/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/neilb/OneDrive/Desktop/Calamity/Calamity Hour/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/neilb/OneDrive/Desktop/Calamity/Calamity Hour/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/neilb/OneDrive/Desktop/Calamity/Calamity Hour/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/neilb/OneDrive/Desktop/Calamity/Calamity Hour/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/neilb/OneDrive/Desktop/Calamity/Calamity Hour/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

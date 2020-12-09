@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip gameOverMan;
-    static AudioSource audioSrc;
+    public AudioClip gameOverMan;
+    public AudioClip hoverFx;
+    public AudioClip clickFx;
+    public AudioSource audioSrc;
 
     void Start()
     {
@@ -15,6 +17,17 @@ public class SoundManager : MonoBehaviour
 
     public static void playSound()
     {
-        audioSrc.PlayOneShot(gameOverMan);
+       // audioSrc.PlayOneShot(gameOverMan);
     }
+
+    public void HoverSound()
+    {
+        audioSrc.PlayOneShot(hoverFx);
+    }
+
+    public void ClickSound()
+    {
+        audioSrc.PlayOneShot(clickFx);
+    }
+
 }
