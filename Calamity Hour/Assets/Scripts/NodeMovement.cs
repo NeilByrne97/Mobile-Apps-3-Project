@@ -19,34 +19,34 @@ public class NodeMovement : MonoBehaviour
        
         currentNode = currentNode.nextNode;
         StartCoroutine(RotateToGoal(true));
-        print("Current Node is " + currentNode);
+       // print("Current Node is " + currentNode);
         
     }
 
     public void CoverNode()
     {
         currentNode = currentNode.coverNode;
-        print("Node is " + currentNode);
+       // print("Node is " + currentNode);
         StartCoroutine(RotateToGoal(true));
     }
 
     public void TurnLeft()
     {
         currentNode = currentNode.leftNode;
-        print("Node is " + currentNode);
+       // print("Node is " + currentNode);
         StartCoroutine(RotateToGoal(true));
     }
 
     public void TurnRight()
     {
         currentNode = currentNode.rightNode;
-        print("Node is " + currentNode);
+       // print("Node is " + currentNode);
         StartCoroutine(RotateToGoal(true));
     }
 
     IEnumerator RotateToGoal(bool initialRotation)
     {
-        print("Rotate");
+        //print("Rotate");
         Quaternion goalRotation;
         if (initialRotation)
         {

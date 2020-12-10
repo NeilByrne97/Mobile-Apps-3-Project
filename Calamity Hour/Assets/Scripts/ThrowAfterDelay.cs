@@ -20,20 +20,23 @@ public class ThrowAfterDelay : MonoBehaviour
 
     public void Throw()
     {
+        print("Throwwwwing");
         Instantiate(throwingObject, throwPoint.position, Quaternion.LookRotation(Camera.main.transform.position - throwPoint.position));
         Instantiate(gib, transform.position, Quaternion.identity);
- 
-       // Invoke("Throw", delay);
-        //gib.SetActive(true);
-        StartCoroutine(Wait1());
-    }
 
-    IEnumerator Wait1()
-    {
+        //StartCoroutine(WaitActive());
         Invoke("Throw", delay);
         gib.SetActive(true);
-        yield return new WaitForSeconds(1);
         StartCoroutine(Wait());
+    }
+
+    IEnumerator WaitActive()
+    {
+        yield return new WaitForSeconds(1);
+        Invoke("Throw", delay);
+        gib.SetActive(true);
+        StartCoroutine(Wait());
+
     }
 
 

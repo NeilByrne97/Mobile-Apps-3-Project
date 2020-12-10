@@ -13,7 +13,7 @@ public class ShootAtClickPosition : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            print("Bang");
+           // print("Bang");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);    // Where curser is on screen
             Quaternion rotation = Quaternion.LookRotation(ray.direction);   // Rotation of bullet
 

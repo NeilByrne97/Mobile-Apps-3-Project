@@ -11,10 +11,10 @@ public class GibOnCollide : MonoBehaviour
     private void OnCollisionEnter(Collision col)
     {
         health--;
-        print("Health is " + health);
+       // print("Health is " + health);
         if (health <= 0)
         {
-            print("Dead");
+           // print("Dead");
             Destroy(gameObject);
             Instantiate(gib, transform.position, Quaternion.identity);
         }
