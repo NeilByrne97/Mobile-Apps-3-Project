@@ -4,18 +4,36 @@ using UnityEngine;
 
 public class ShootAfterDelay : MonoBehaviour
 {
-    public float delay = 15.0f;
+    public float delay = 1.0f;
+    public GameObject throwingObject;
+    public Transform throwPoint;
+
+    private GameObject player;
     private Animator animator;
 
-    public void Shoot()
+    void Start()
     {
-        print("Yooooo");
+        player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponentInChildren<Animator>();
-        Invoke("Shoot", delay);
-        // Deal damage to player
-        HealthManager.RemoveHealth();
-        animator.SetBool("Shoot", true);
-        Invoke("Shoot", delay);
+        Invoke("Throw", delay);
     }
+
+    void Update()
+    {
+        Invoke("Throw", delay);
+
+        //animator.SetBool("Throw", false);
+    }
+
+    void Shoot()
+    {
+        Instantiate(throwingObject, throwPoint.position, Quaternion.LookRotation(Camera.main.transform.position - throwPoint.position));
+        //animator.SetBool("Throw", true);
+
+        Invoke("Throw", delay);
+
+    }
+
+   
 
 }

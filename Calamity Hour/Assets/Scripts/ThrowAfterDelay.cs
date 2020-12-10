@@ -7,28 +7,41 @@ public class ThrowAfterDelay : MonoBehaviour
     public float delay = 1.0f;
     public GameObject throwingObject;
     public Transform throwPoint;
+    public GameObject gib;
 
     private GameObject player;
-    private Animator animator;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        animator = GetComponentInChildren<Animator>();
-        Invoke("Throw", delay);
+        //Invoke("Throw", delay);
+        gib.SetActive(false);
     }
 
-    void Update()
-    {
-        animator.SetBool("Throw", false);
-    }
-
-    void Throw()
+    public void Throw()
     {
         Instantiate(throwingObject, throwPoint.position, Quaternion.LookRotation(Camera.main.transform.position - throwPoint.position));
-        animator.SetBool("Throw", true);
-
-        Invoke("Throw", delay);
+        Instantiate(gib, transform.position, Quaternion.identity);
+ 
+       // Invoke("Throw", delay);
+        //gib.SetActive(true);
+        StartCoroutine(Wait1());
     }
+
+    IEnumerator Wait1()
+    {
+        Invoke("Throw", delay);
+        gib.SetActive(true);
+        yield return new WaitForSeconds(1);
+        StartCoroutine(Wait());
+    }
+
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1);
+        gib.SetActive(false);
+    }
+
 
 }

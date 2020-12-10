@@ -55,8 +55,6 @@ public class AmmoManager : MonoBehaviour
         {
             ammoIcons[i].SetActive(true);
         }
-        
-
     }
 
 

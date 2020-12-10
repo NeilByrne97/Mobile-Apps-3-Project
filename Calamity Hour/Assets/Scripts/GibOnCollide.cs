@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GibOnCollide : MonoBehaviour
 {
-    public GameObject gib = null;
+    public GameObject gib;
     public int health = 2;
 
 
