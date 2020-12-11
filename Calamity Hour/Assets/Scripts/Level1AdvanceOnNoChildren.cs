@@ -65,7 +65,7 @@ public class Level1AdvanceOnNoChildren : MonoBehaviour
             enemyNodeMovement1.MoveToNextNode();
             enemyNodeMovement2.MoveToNextNode();
             enemyNodeMovement3.MoveToNextNode();
-           // enemyNodeMovement4.MoveToNextNode();
+            //enemyNodeMovement4.MoveToNextNode();
             //enemyNodeMovement5.MoveToNextNode();
 
       /*      if (shootAfterDelay0 == null)
@@ -97,14 +97,14 @@ public class Level1AdvanceOnNoChildren : MonoBehaviour
             {
                 shootAfterDelay5.GetComponent<ThrowAfterDelay>();
             }
-
+*/
             shootAfterDelay0.Throw();
             shootAfterDelay1.Throw();
             shootAfterDelay2.Throw();
             shootAfterDelay3.Throw();
             shootAfterDelay4.Throw();
             shootAfterDelay5.Throw();
-*/
+
 
 
 

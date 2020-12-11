@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Clock\Scripts\Clock.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -192,6 +193,7 @@
     <None Include="Assets\Prefabs\Industrial Props\ReadMe.txt" />
     <None Include="Assets\Imports\HighQualityBricks&amp;Walls\Shaders\wood-877365.shader" />
     <None Include="Assets\Textures\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Snack_machines\readme.txt" />
     <None Include="Assets\Imports\HighQualityBricks&amp;Walls\Shaders\wall-846013.shader" />
     <None Include="Assets\Imports\ZRNAssets\Skyboxes\_skybox info.txt" />
     <None Include="Assets\Textures\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
