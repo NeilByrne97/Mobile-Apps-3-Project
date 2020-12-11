@@ -45,6 +45,7 @@ public class CountdownTimer : MonoBehaviour
         print("10 secs added");
         Instance.currentTime += 10;
         Instance.addTen = true;
+        print("1");
     }
 
 
@@ -58,12 +59,20 @@ public class CountdownTimer : MonoBehaviour
         }
         if (addTen)
         {
-            print("AAAAADDD 10");
+            print("2");
             addTenSecsSplash.SetActive(true);
-            //yield return new WaitForSecondsRealtime(2);
-            //addTenSecsSplash.SetActive(false);
-
+            StartCoroutine(Wait());
+            Instance.addTen = false;
         }
+
+        IEnumerator Wait()
+        {
+            print("Waaait");
+            yield return new WaitForSeconds(1);
+            addTenSecsSplash.SetActive(false);
+        }
+
+
 
     }
 }

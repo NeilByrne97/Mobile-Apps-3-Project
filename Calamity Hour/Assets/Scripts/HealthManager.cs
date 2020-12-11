@@ -42,7 +42,7 @@ public class HealthManager : MonoBehaviour
 
         if (Instance.currentHealth >= 0)
         {
-            Instance.healthIcons[Instance.currentHealth].SetActive(true); // Add hearth icon
+            Instance.healthIcons[Instance.currentHealth-1].SetActive(true); // Add hearth icon, -1 is previous hearth icon
         }
 
     }

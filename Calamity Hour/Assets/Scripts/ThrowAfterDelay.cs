@@ -30,16 +30,6 @@ public class ThrowAfterDelay : MonoBehaviour
         StartCoroutine(Wait());
     }
 
-    IEnumerator WaitActive()
-    {
-        yield return new WaitForSeconds(1);
-        Invoke("Throw", delay);
-        gib.SetActive(true);
-        StartCoroutine(Wait());
-
-    }
-
-
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(1);

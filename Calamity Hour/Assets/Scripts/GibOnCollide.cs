@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class GibOnCollide : MonoBehaviour
 {
+    public GameObject item;
     public GameObject gib;
-    public int health = 2;
+    public AudioSource audioSrc;
+    public AudioClip deathClip;
 
+    public int health = 2;
 
     private void OnCollisionEnter(Collision col)
     {
@@ -14,15 +17,18 @@ public class GibOnCollide : MonoBehaviour
        // print("Health is " + health);
         if (health <= 0)
         {
-           // print("Dead");
+            item.GetComponent<GameObject>();    // Item drop
+            print("Dropped");
+            item.SetActive(true);
             Destroy(gameObject);
             Instantiate(gib, transform.position, Quaternion.identity);
+            audioSrc.PlayOneShot(deathClip);          
         }
 
 
 
-      // Destroy(gameObject);
-      // Instantiate(gib, transform.position, Quaternion.identity);
-    }
+    // Destroy(gameObject);
+    // Instantiate(gib, transform.position, Quaternion.identity);
+}
 
 }
