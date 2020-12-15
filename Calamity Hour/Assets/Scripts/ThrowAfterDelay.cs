@@ -7,9 +7,14 @@ public class ThrowAfterDelay : MonoBehaviour
     public float delay = 1.0f;
     public GameObject throwingObject;
     public Transform throwPoint;
+
+    public AudioSource audioSrc;
+    public AudioClip throwClip;
+
     public GameObject gib;
 
     private GameObject player;
+
 
     void Start()
     {
@@ -20,6 +25,8 @@ public class ThrowAfterDelay : MonoBehaviour
 
     public void Throw()
     {
+        audioSrc.PlayOneShot(throwClip);
+
         print("Throwwwwing");
         Instantiate(throwingObject, throwPoint.position, Quaternion.LookRotation(Camera.main.transform.position - throwPoint.position));
         Instantiate(gib, transform.position, Quaternion.identity);
@@ -27,8 +34,10 @@ public class ThrowAfterDelay : MonoBehaviour
         //StartCoroutine(WaitActive());
         Invoke("Throw", delay);
         gib.SetActive(true);
+
         StartCoroutine(Wait());
     }
+
 
     IEnumerator Wait()
     {

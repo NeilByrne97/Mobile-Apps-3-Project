@@ -105,6 +105,7 @@
     <Compile Include="Assets\Scripts\GibOnCollide.cs" />
     <Compile Include="Assets\Scripts\HealthManager.cs" />
     <Compile Include="Assets\Scripts\Level1AdvanceOnNoChildren.cs" />
+    <Compile Include="Assets\Scripts\Level3AdvanceOnNoChildren.cs" />
     <Compile Include="Assets\Scripts\LevelComplete.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MoveForward.cs" />
@@ -113,8 +114,10 @@
     <Compile Include="Assets\Scripts\PauseGame.cs" />
     <Compile Include="Assets\Scripts\PowerUps.cs" />
     <Compile Include="Assets\Scripts\RemoveHealthOnTriggerEnter.cs" />
+    <Compile Include="Assets\Scripts\ScoreCounter.cs" />
     <Compile Include="Assets\Scripts\ShootAfterDelay.cs" />
     <Compile Include="Assets\Scripts\ShootAtClickPosition.cs" />
+    <Compile Include="Assets\Scripts\ShootOnNoChildren.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\ThrowAfterDelay.cs" />
     <Compile Include="Assets\Textures\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

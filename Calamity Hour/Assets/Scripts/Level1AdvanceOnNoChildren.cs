@@ -20,11 +20,11 @@ public class Level1AdvanceOnNoChildren : MonoBehaviour
     public ThrowAfterDelay shootAfterDelay4;
     public ThrowAfterDelay shootAfterDelay5;
 
-
     void Update()
     {
         if (transform.childCount <= 0)
         {
+            print("Yirt");
             if (playerNodeMovement == null)
             {
                 playerNodeMovement.GetComponent<NodeMovement>();
@@ -65,47 +65,45 @@ public class Level1AdvanceOnNoChildren : MonoBehaviour
             enemyNodeMovement1.MoveToNextNode();
             enemyNodeMovement2.MoveToNextNode();
             enemyNodeMovement3.MoveToNextNode();
-            //enemyNodeMovement4.MoveToNextNode();
-            //enemyNodeMovement5.MoveToNextNode();
+            enemyNodeMovement4.MoveToNextNode();
+            enemyNodeMovement5.MoveToNextNode();
 
-      /*      if (shootAfterDelay0 == null)
-            {
-                shootAfterDelay0.GetComponent<ThrowAfterDelay>();
-            }
+            /*      if (shootAfterDelay0 == null)
+                  {
+                      shootAfterDelay0.GetComponent<ThrowAfterDelay>();
+                  }
 
-            if (shootAfterDelay1 == null)
-            {
-                shootAfterDelay1.GetComponent<ThrowAfterDelay>();
-            }
+                  if (shootAfterDelay1 == null)
+                  {
+                      shootAfterDelay1.GetComponent<ThrowAfterDelay>();
+                  }
 
-            if (shootAfterDelay2 == null)
-            {
-                shootAfterDelay2.GetComponent<ThrowAfterDelay>();
-            }
+                  if (shootAfterDelay2 == null)
+                  {
+                      shootAfterDelay2.GetComponent<ThrowAfterDelay>();
+                  }
 
-            if (shootAfterDelay3 == null)
-            {
-                shootAfterDelay3.GetComponent<ThrowAfterDelay>();
-            }
+                  if (shootAfterDelay3 == null)
+                  {
+                      shootAfterDelay3.GetComponent<ThrowAfterDelay>();
+                  }
 
-            if (shootAfterDelay4 == null)
-            {
-                shootAfterDelay4.GetComponent<ThrowAfterDelay>();
-            }
+                  if (shootAfterDelay4 == null)
+                  {
+                      shootAfterDelay4.GetComponent<ThrowAfterDelay>();
+                  }
 
-            if (shootAfterDelay5 == null)
-            {
-                shootAfterDelay5.GetComponent<ThrowAfterDelay>();
-            }
-*/
+                  if (shootAfterDelay5 == null)
+                  {
+                      shootAfterDelay5.GetComponent<ThrowAfterDelay>();
+                  }
+      */
             shootAfterDelay0.Throw();
             shootAfterDelay1.Throw();
             shootAfterDelay2.Throw();
             shootAfterDelay3.Throw();
             shootAfterDelay4.Throw();
             shootAfterDelay5.Throw();
-
-
 
 
             Destroy(gameObject);

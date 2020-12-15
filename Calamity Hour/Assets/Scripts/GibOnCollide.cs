@@ -22,7 +22,8 @@ public class GibOnCollide : MonoBehaviour
             item.SetActive(true);
             Destroy(gameObject);
             Instantiate(gib, transform.position, Quaternion.identity);
-            audioSrc.PlayOneShot(deathClip);          
+            audioSrc.PlayOneShot(deathClip);
+            ScoreCounter.AddScore();
         }
 
 

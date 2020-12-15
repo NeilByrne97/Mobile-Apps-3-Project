@@ -9,6 +9,9 @@ public class SoundManager : MonoBehaviour
     public AudioClip clickFx;
     public AudioSource audioSrc;
 
+    public AudioClip music0;
+
+
     public static void playSound()
     {
        // audioSrc.PlayOneShot(gameOverMan);
@@ -23,5 +26,13 @@ public class SoundManager : MonoBehaviour
     {
         audioSrc.PlayOneShot(clickFx);
     }
+
+    public void Start()
+    {
+        audioSrc.PlayOneShot(music0);
+ 
+    }
+
+
 
 }

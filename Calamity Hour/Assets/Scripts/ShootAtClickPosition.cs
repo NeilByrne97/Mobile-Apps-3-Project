@@ -9,6 +9,9 @@ public class ShootAtClickPosition : MonoBehaviour
     public Rigidbody bullet;
     public ForceMode forceMode;
 
+    public AudioSource audioSrc;
+    public AudioClip bang;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -21,6 +24,9 @@ public class ShootAtClickPosition : MonoBehaviour
 
             Rigidbody instance = Instantiate(bullet, transform.position, rotation) as Rigidbody; // Instance of bullet
             instance.AddForce(ray.direction * force, forceMode); // Add force to bullet        
+
+            audioSrc.PlayOneShot(bang);
+
         }
     }
 }
