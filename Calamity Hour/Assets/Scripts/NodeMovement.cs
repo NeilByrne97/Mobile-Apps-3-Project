@@ -6,7 +6,6 @@ using UnityEngine;
 public class NodeMovement : MonoBehaviour
 {
     public Node currentNode;
-
     public float movementSpeed = 1.0f;
     public float rotationSpeed = 45.0f;
 
@@ -14,39 +13,34 @@ public class NodeMovement : MonoBehaviour
     {
         if (currentNode == null)
         {
-            throw new System.NullReferenceException("Don't worry about it");
+            throw new System.NullReferenceException("Null Reference Exception");
         }
        
         currentNode = currentNode.nextNode;
         StartCoroutine(RotateToGoal(true));
-       // print("Current Node is " + currentNode);
         
     }
 
     public void CoverNode()
-    {
+    {   // Cover Nodes on each player node
         currentNode = currentNode.coverNode;
-       // print("Node is " + currentNode);
         StartCoroutine(RotateToGoal(true));
     }
-
+    // Only used in Direction choice
     public void TurnLeft()
     {
         currentNode = currentNode.leftNode;
-       // print("Node is " + currentNode);
         StartCoroutine(RotateToGoal(true));
     }
 
     public void TurnRight()
     {
         currentNode = currentNode.rightNode;
-       // print("Node is " + currentNode);
         StartCoroutine(RotateToGoal(true));
     }
 
     IEnumerator RotateToGoal(bool initialRotation)
     {
-        //print("Rotate");
         Quaternion goalRotation;
         if (initialRotation)
         {
@@ -60,7 +54,7 @@ public class NodeMovement : MonoBehaviour
         while (true)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, goalRotation, rotationSpeed * Time.deltaTime);
-            
+            // Keep rotating until you reach node's rotation
             if (transform.rotation != goalRotation)
             {
                 yield return null;

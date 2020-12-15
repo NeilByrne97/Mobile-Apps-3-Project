@@ -7,10 +7,9 @@ public class PowerUps : MonoBehaviour
     GameObject gameObject;
 
     private void OnCollisionEnter(Collision collision)
-    {
+    {       // Check the tag of item destroyed
         if(gameObject = GameObject.FindGameObjectWithTag("InfiniteAmmo"))
         {
-            print("InfiniteAmmo");
            // AmmoManager.InfiniteAmmo();
             Destroy(gameObject);
         } 
@@ -18,14 +17,12 @@ public class PowerUps : MonoBehaviour
         {
             Destroy(gameObject);
             CountdownTimer.AddTenSecs();
-            print("ExtraTime");
 
         }
         else if (gameObject = GameObject.FindGameObjectWithTag("ExtraLife"))
         {
             Destroy(gameObject);
             HealthManager.AddHealth();
-            print("ExtraLife");
         }
 
 

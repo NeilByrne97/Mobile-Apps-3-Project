@@ -12,12 +12,8 @@ public class EnemyHealth : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         enemy0.health--;
-        print("Health--");
         if(enemy0.health <= 0)
         {
-            //GibOnCollide.Destroy();
-            print("Dead");
-
             Destroy(gameObject);
             Instantiate(gib, transform.position, Quaternion.identity);
 

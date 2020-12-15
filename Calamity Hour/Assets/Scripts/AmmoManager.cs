@@ -5,9 +5,7 @@ using UnityEngine;
     // Functionally identical to HealthManager script
 public class AmmoManager : MonoBehaviour
 { 
-   // public static AmmoManager Instance;
     public ShootAtClickPosition shootAtClickPosition;
-
     public int startingAmmo = 6;
     public GameObject[] ammoIcons;
     public GameObject reloadSplash;
@@ -30,13 +28,10 @@ public class AmmoManager : MonoBehaviour
                 currentAmmo--;
                 ammoIcons[currentAmmo].SetActive(false); // Remove bullet icon
             }
-            print("Current ammo is " + currentAmmo);
-
            
             // Reload
             if (currentAmmo <= 0)
             {
-                print("No ammo");
                 reloadSplash.SetActive(true);   // RELOAD splash screen true
                 shootAtClickPosition.enabled = false;
             }
@@ -45,9 +40,7 @@ public class AmmoManager : MonoBehaviour
 
     public void Reload()
     {
-        print("Reload");
         currentAmmo = 6;
-        print("Current ammo is " + currentAmmo);
         reloadSplash.SetActive(false);   // RELOAD splash screen false
         shootAtClickPosition.enabled = true;
 
@@ -56,7 +49,6 @@ public class AmmoManager : MonoBehaviour
             ammoIcons[i].SetActive(true);
         }
     }
-
 
     public void InfiniteAmmo()
     {

@@ -19,7 +19,7 @@ public class ScoreCounter : MonoBehaviour
     }
 
     public static void AddScore()
-    {
+    {   // Called if +10 item is picked up
         Instance.currentScore += 10;
         Instance.countdownText.text = Instance.currentScore.ToString();
     }

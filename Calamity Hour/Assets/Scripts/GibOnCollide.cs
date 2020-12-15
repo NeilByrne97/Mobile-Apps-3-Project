@@ -9,27 +9,21 @@ public class GibOnCollide : MonoBehaviour
     public AudioSource audioSrc;
     public AudioClip deathClip;
 
-    public int health = 2;
+    public int health = 2;  // Medium enemies health, config for other enemies
 
     private void OnCollisionEnter(Collision col)
     {
         health--;
-       // print("Health is " + health);
         if (health <= 0)
         {
             item.GetComponent<GameObject>();    // Item drop
-            print("Dropped");
-            item.SetActive(true);
+            item.SetActive(true);   // If they have one then drop it
             Destroy(gameObject);
             Instantiate(gib, transform.position, Quaternion.identity);
             audioSrc.PlayOneShot(deathClip);
-            ScoreCounter.AddScore();
+            ScoreCounter.AddScore(); // When enemy dies add to the player score
         }
 
-
-
-    // Destroy(gameObject);
-    // Instantiate(gib, transform.position, Quaternion.identity);
 }
 
 }

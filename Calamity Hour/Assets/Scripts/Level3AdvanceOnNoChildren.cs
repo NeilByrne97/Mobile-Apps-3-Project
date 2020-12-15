@@ -14,10 +14,9 @@ public class Level3AdvanceOnNoChildren : MonoBehaviour
     public NodeMovement enemyNodeMovement5;
 
     void Update()
-    {
+    {   // If all enemies in stage are dead
         if (transform.childCount <= 0)
-        {
-            print("Yirt");
+        {       // Find the next stage of enemeis 
             if (playerNodeMovement == null)
             {
                 playerNodeMovement.GetComponent<NodeMovement>();
@@ -52,7 +51,7 @@ public class Level3AdvanceOnNoChildren : MonoBehaviour
             {
                 enemyNodeMovement5.GetComponent<NodeMovement>();
             }
-
+            // Move them into position
             playerNodeMovement.MoveToNextNode();
             enemyNodeMovement0.MoveToNextNode();
             enemyNodeMovement1.MoveToNextNode();

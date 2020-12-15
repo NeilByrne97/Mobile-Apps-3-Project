@@ -19,22 +19,18 @@ public class ThrowAfterDelay : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        //Invoke("Throw", delay);
-        gib.SetActive(false);
+        gib.SetActive(false);   // Don't want enemies throwing on awake
     }
 
     public void Throw()
     {
         audioSrc.PlayOneShot(throwClip);
-
-        print("Throwwwwing");
         Instantiate(throwingObject, throwPoint.position, Quaternion.LookRotation(Camera.main.transform.position - throwPoint.position));
         Instantiate(gib, transform.position, Quaternion.identity);
-
-        //StartCoroutine(WaitActive());
+        // Throw on configed delay
         Invoke("Throw", delay);
         gib.SetActive(true);
-
+        // Wait a second and turn it off again so delay can be invoked again
         StartCoroutine(Wait());
     }
 

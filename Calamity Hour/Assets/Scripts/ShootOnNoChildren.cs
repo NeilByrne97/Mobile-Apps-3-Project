@@ -10,16 +10,10 @@ public class ShootOnNoChildren : MonoBehaviour
     public ThrowAfterDelay shootAfterDelay3;
     public ThrowAfterDelay shootAfterDelay4;
     public ThrowAfterDelay shootAfterDelay5;
-
-    void Update()
-    {
-
-    }
-
+    
+    // When all the enmies in stage are dead, next stage of enemies shoot
     private void OnTriggerEnter(Collider other)
     {
-        print("Shooooot");
-
         if (shootAfterDelay0 == null)
         {
             shootAfterDelay0.GetComponent<ThrowAfterDelay>();
@@ -50,7 +44,6 @@ public class ShootOnNoChildren : MonoBehaviour
             shootAfterDelay0.GetComponent<ThrowAfterDelay>();
         }
 
-        print("Shooooot");
         shootAfterDelay0.Throw();
         shootAfterDelay1.Throw();
         shootAfterDelay2.Throw();

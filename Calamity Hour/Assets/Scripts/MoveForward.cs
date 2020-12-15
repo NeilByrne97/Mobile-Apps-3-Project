@@ -8,7 +8,7 @@ public class MoveForward : MonoBehaviour
     public bool useRigidbodyMove = false;
 
     void Update()
-    {
+    {   // For enemy projectiles to travel forward
         transform.position += transform.forward * speed * Time.deltaTime;
     }
 }

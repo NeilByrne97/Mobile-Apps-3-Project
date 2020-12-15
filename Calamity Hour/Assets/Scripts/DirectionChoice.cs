@@ -11,10 +11,9 @@ public class DirectionChoice : MonoBehaviour
 
     public NodeMovement NodeMovement;
 
+    // Depeding on the button , call the associated method 
     public void CoverReload()
     {
-        //ChoiceMade = 0;
-        print("Cover");
         if (NodeMovement == null)
         {
             NodeMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<NodeMovement>();
@@ -25,7 +24,6 @@ public class DirectionChoice : MonoBehaviour
     public void LeftOption()
     {
         ChoiceMade = 1;
-        print("Left");
         if (NodeMovement == null)
         {
             NodeMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<NodeMovement>();
@@ -36,7 +34,6 @@ public class DirectionChoice : MonoBehaviour
     public void RightOption()
     {
         ChoiceMade = 2;
-        print("Right");
         if (NodeMovement == null)
         {
             NodeMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<NodeMovement>();
@@ -45,7 +42,7 @@ public class DirectionChoice : MonoBehaviour
     }
 
     private void Update()
-    {
+    {   // Once a choice is made, turn off the prompt 
         if(ChoiceMade >= 1)
         {
             Left.SetActive(false);

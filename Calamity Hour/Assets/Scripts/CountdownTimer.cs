@@ -9,7 +9,7 @@ public class CountdownTimer : MonoBehaviour
     public static CountdownTimer Instance;
 
     float currentTime;
-    float startingtime = 2000f;   // Amount of time player has to complete level
+    float startingtime = 200f;   // Amount of time player has to complete level
     private bool gameOver = false;
     private bool addTen = false;
 
@@ -26,11 +26,11 @@ public class CountdownTimer : MonoBehaviour
 
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
+        currentTime -= 1 * Time.deltaTime;  // Remove a second every second
         countdownText.text =  currentTime.ToString();
 
         if (currentTime <= 10)
-        {
+        {   // Warning
             countdownText.color = Color.red;
         }
 
@@ -41,11 +41,9 @@ public class CountdownTimer : MonoBehaviour
     }
 
     public static void AddTenSecs()
-    {
-        print("10 secs added");
+    {   // Called from Item Drop
         Instance.currentTime += 10;
         Instance.addTen = true;
-        print("1");
     }
 
 
@@ -53,26 +51,21 @@ public class CountdownTimer : MonoBehaviour
     {
         if (gameOver)
         {
-            print("Game over");
             gameOverSplash.SetActive(true); // GAME OVER splash screen
             Time.timeScale = 0; // Stop game time
         }
         if (addTen)
         {
-            print("2");
             addTenSecsSplash.SetActive(true);
             StartCoroutine(Wait());
             Instance.addTen = false;
         }
 
         IEnumerator Wait()
-        {
-            print("Waaait");
+        {   // Set the splash for 1 second
             yield return new WaitForSeconds(1);
             addTenSecsSplash.SetActive(false);
         }
-
-
 
     }
 }

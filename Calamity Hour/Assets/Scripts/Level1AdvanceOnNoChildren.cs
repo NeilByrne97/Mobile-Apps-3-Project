@@ -21,10 +21,9 @@ public class Level1AdvanceOnNoChildren : MonoBehaviour
     public ThrowAfterDelay shootAfterDelay5;
 
     void Update()
-    {
+    {   // If all the enemies are dead
         if (transform.childCount <= 0)
-        {
-            print("Yirt");
+        {   // Find enmies in next stage 
             if (playerNodeMovement == null)
             {
                 playerNodeMovement.GetComponent<NodeMovement>();
@@ -59,7 +58,7 @@ public class Level1AdvanceOnNoChildren : MonoBehaviour
             {
                 enemyNodeMovement5.GetComponent<NodeMovement>();
             }
-
+            // Start them moving into position
             playerNodeMovement.MoveToNextNode();
             enemyNodeMovement0.MoveToNextNode();
             enemyNodeMovement1.MoveToNextNode();
@@ -67,37 +66,8 @@ public class Level1AdvanceOnNoChildren : MonoBehaviour
             enemyNodeMovement3.MoveToNextNode();
             enemyNodeMovement4.MoveToNextNode();
             enemyNodeMovement5.MoveToNextNode();
-
-            /*      if (shootAfterDelay0 == null)
-                  {
-                      shootAfterDelay0.GetComponent<ThrowAfterDelay>();
-                  }
-
-                  if (shootAfterDelay1 == null)
-                  {
-                      shootAfterDelay1.GetComponent<ThrowAfterDelay>();
-                  }
-
-                  if (shootAfterDelay2 == null)
-                  {
-                      shootAfterDelay2.GetComponent<ThrowAfterDelay>();
-                  }
-
-                  if (shootAfterDelay3 == null)
-                  {
-                      shootAfterDelay3.GetComponent<ThrowAfterDelay>();
-                  }
-
-                  if (shootAfterDelay4 == null)
-                  {
-                      shootAfterDelay4.GetComponent<ThrowAfterDelay>();
-                  }
-
-                  if (shootAfterDelay5 == null)
-                  {
-                      shootAfterDelay5.GetComponent<ThrowAfterDelay>();
-                  }
-      */
+            
+            // Invoke the delay for when they throw projectiles
             shootAfterDelay0.Throw();
             shootAfterDelay1.Throw();
             shootAfterDelay2.Throw();

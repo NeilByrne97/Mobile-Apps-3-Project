@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    // Gui sounds
     public AudioClip gameOverMan;
     public AudioClip hoverFx;
     public AudioClip clickFx;

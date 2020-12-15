@@ -62,15 +62,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Clock\Scripts\Clock.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
-    <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Imports\Clock\Scripts\Clock.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\GunShoot.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Imports\First person controller\Components\Crouch.cs" />
     <Compile Include="Assets\Imports\First person controller\Components\GroundCheck.cs" />
     <Compile Include="Assets\Imports\First person controller\Components\Jump.cs" />
@@ -196,14 +196,14 @@
     <None Include="Assets\Prefabs\Industrial Props\ReadMe.txt" />
     <None Include="Assets\Imports\HighQualityBricks&amp;Walls\Shaders\wood-877365.shader" />
     <None Include="Assets\Textures\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\Snack_machines\readme.txt" />
+    <None Include="Assets\Imports\Snack_machines\readme.txt" />
     <None Include="Assets\Imports\HighQualityBricks&amp;Walls\Shaders\wall-846013.shader" />
     <None Include="Assets\Imports\ZRNAssets\Skyboxes\_skybox info.txt" />
     <None Include="Assets\Textures\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Imports\ZRNAssets\005339_08932_25_14\Shaders\su_Double_and_Clip.shader" />
     <None Include="Assets\Textures\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Imports\HighQualityBricks&amp;Walls\Shaders\brick-807728.shader" />
-    <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
+    <None Include="Assets\Imports\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\Textures\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Textures\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Textures\TextMesh Pro\Shaders\TMP_Sprite.shader" />
@@ -763,11 +763,17 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.postprocessing.Editor">
+      <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.postprocessing.Runtime">
+      <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/neilb/OneDrive/Desktop/Mobile-Apps-3-Project/Calamity Hour/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

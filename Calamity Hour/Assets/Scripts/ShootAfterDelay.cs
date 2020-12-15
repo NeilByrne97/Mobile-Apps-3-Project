@@ -12,7 +12,7 @@ public class ShootAfterDelay : MonoBehaviour
     private Animator animator;
 
     void Start()
-    {
+    {       // Wait for the given amount of seconds then shoot player
         player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponentInChildren<Animator>();
         Invoke("Throw", delay);
@@ -21,15 +21,11 @@ public class ShootAfterDelay : MonoBehaviour
     void Update()
     {
         Invoke("Throw", delay);
-
-        //animator.SetBool("Throw", false);
     }
 
     void Shoot()
     {
         Instantiate(throwingObject, throwPoint.position, Quaternion.LookRotation(Camera.main.transform.position - throwPoint.position));
-        //animator.SetBool("Throw", true);
-
         Invoke("Throw", delay);
 
     }
